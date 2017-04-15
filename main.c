@@ -97,7 +97,7 @@ int main(int argc, char** argv)
 	randomDelays[2] = random_delay_init(3, 62535);
 	randomDelays[3] = random_delay_init(2, 62535);
 	
-   while (true) {
+	while (true) {
 		shared_value = 0;
 		
 		for (i=0; i<num_workers; i++) {
@@ -110,7 +110,7 @@ int main(int argc, char** argv)
 			pthread_join(workers[i], NULL);
 			
 		printf("shared value = %u\n", shared_value);
-   }
+	}
     
    return (EXIT_SUCCESS);
 }
